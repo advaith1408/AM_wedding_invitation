@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="only light" />
+  <title>Manoj Kumar &amp; Arpitha Wedding Invitation</title>
+  <meta name="description"
+    content="Celebrate the wedding of Manoj Kumar &amp; Arpitha on 31st December 2026 at LN Convention, Sangareddy. View the digital wedding invitation, events, venue details and RSVP." />
+
+  <!-- Preload key visual assets -->
+  <link rel="preload" as="image" href="assets/kalyana-mandapam/entry-card.jpg" fetchpriority="high" />
+  <link rel="preload" as="image" href="assets/south-indian/mandala-gold.webp" />
+  <link rel="preload" as="image" href="assets/kalyana-mandapam/km-audio-off.png" />
+
+  <!-- Google Fonts matching Kalyana Mandapam theme -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Marcellus&family=Noto+Serif+Telugu:wght@400;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Original Kalyana Mandapam Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    :root {
+      --km-font-cormorant: "Cormorant Garamond", serif;
+      --km-font-marcellus: "Marcellus", serif;
+      --km-font-great-vibes: "Great Vibes", cursive;
+      --km-font-cinzel: "Cinzel", serif;
+      --km-font-telugu: "Noto Serif Telugu", serif;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      border: 0 solid;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-size: inherit;
+      font-weight: inherit;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: inherit;
+    }
+
+    audio,
+    canvas,
+    embed,
+    iframe,
+    img,
+    object,
+    svg,
+    video {
+      display: block;
+      vertical-align: middle;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+      font: inherit;
+      letter-spacing: inherit;
+      color: inherit;
+      background-color: transparent;
+      border-radius: 0;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fbeeb8;
+      color: #2b1608;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Fullscreen Lightbox for Gallery Photos */
+    .km-lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      background: rgba(20, 10, 4, 0.92);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.28s ease;
+    }
+
+    .km-lightbox.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .km-lightbox__img {
+      max-width: 90vw;
+      max-height: 85vh;
+      object-fit: contain;
+      border-radius: 4px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(201, 147, 47, 0.45);
+      transform: scale(0.96);
+      transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+      user-select: none;
+    }
+
+    .km-lightbox.is-open .km-lightbox__img {
+      transform: scale(1);
+    }
+
+    .km-lightbox__btn {
+      position: absolute;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid rgba(201, 147, 47, 0.6);
+      background: rgba(43, 22, 8, 0.75);
+      color: #fbeeb8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.2s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .km-lightbox__btn:hover {
+      background: var(--km-maroon);
+      transform: scale(1.06);
+    }
+
+    .km-lightbox__close {
+      top: 1.25rem;
+      right: 1.25rem;
+    }
+
+    .km-lightbox__prev {
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .km-lightbox__prev:hover {
+      transform: translateY(-50%) scale(1.06);
+    }
+
+    .km-lightbox__next {
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .km-lightbox__next:hover {
+      transform: translateY(-50%) scale(1.06);
+    }
+
+    .km-lightbox__counter {
+      position: absolute;
+      bottom: 1.25rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: var(--km-font-marcellus), serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.2em;
+      color: #fbeeb8;
+      opacity: 0.85;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="km-root" class="kalyana-mandapam km-psm km-legacy-entry-align">
+
+    <!-- 1. HERO SECTION -->
+    <section class="km-hero km-section" id="km-hero">
+      <div class="km-hero__video" id="km-hero-video-wrap" style="position:absolute;inset:0">
+        <video id="km-hero-video" muted playsinline preload="auto" disableremoteplayback aria-hidden="true"
+          webkit-playsinline="true"
+          style="position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:0">
+          <source id="km-video-src-hevc" src="assets/kalyana-mandapam/hero-procession-bg-hevc.mp4"
+            type='video/mp4; codecs="hvc1"' />
+          <source id="km-video-src-mp4" src="assets/kalyana-mandapam/hero-procession-bg-v2.mp4" type="video/mp4" />
+        </video>
+        <canvas id="km-hero-canvas"
+          style="position:absolute;inset:0;width:100%;height:100%;z-index:1;display:block"></canvas>
+      </div>
+      <div class="km-hero__scrim"></div>
+      <div class="km-hero__content km-container" id="km-hero-content">
+        <p class="km-hero__invocation km-font-serif" id="hero-invocation">|| Shree Ganeshay Namah ||</p>
+        <h1 class="km-hero__name km-hero__groom km-font-script" id="hero-first-name"></h1>
+        <p class="km-hero__amp km-font-script">&amp;</p>
+        <h1 class="km-hero__name km-hero__bride km-font-script" id="hero-second-name"></h1>
+        <p class="km-hero__date km-font-heading" id="hero-date"></p>
+        <p class="km-hero__venue">
+          <span class="km-hero__venue-at km-font-serif">at</span>
+          <span class="km-font-label" id="hero-venue"></span>
+        </p>
+      </div>
+    </section>
+
+    <!-- 2. THE COUPLE SECTION -->
+    <section class="km-couple km-section" id="km-couple">
+      <div class="km-frame" aria-hidden="true">
+        <div class="km-frame-rail km-frame-rail--top"></div>
+        <div class="km-frame-rail km-frame-rail--bottom"></div>
+        <div class="km-frame-rail km-frame-rail--left"></div>
+        <div class="km-frame-rail km-frame-rail--right"></div>
+        <div class="km-frame-corner km-frame-corner--tl"></div>
+        <div class="km-frame-corner km-frame-corner--tr"></div>
+        <div class="km-frame-corner km-frame-corner--bl"></div>
+        <div class="km-frame-corner km-frame-corner--br"></div>
+      </div>
+      <img class="km-couple__scenery km-couple__scenery--top" src="assets/kalyana-mandapam/temple-scenery.png" alt=""
+        aria-hidden="true" loading="lazy" decoding="async" />
+      <img class="km-couple__scenery km-couple__scenery--bottom" src="assets/kalyana-mandapam/temple-scenery.png" alt=""
+        aria-hidden="true" loading="lazy" decoding="async" />
+      <svg class="km-couple__bird km-couple__bird--1" viewBox="0 0 20 7" aria-hidden="true">
+        <path d="M1 5.5 Q 5.5 1, 10 5 Q 14.5 1, 19 5.5" fill="none" stroke="#c9ad77" stroke-width="1.4"
+          stroke-linecap="round"></path>
+      </svg>
+      <svg class="km-couple__bird km-couple__bird--2" viewBox="0 0 20 7" aria-hidden="true">
+        <path d="M1 5.5 Q 5.5 1, 10 5 Q 14.5 1, 19 5.5" fill="none" stroke="#c9ad77" stroke-width="1.4"
+          stroke-linecap="round"></path>
+      </svg>
+      <svg class="km-couple__bird km-couple__bird--3" viewBox="0 0 20 7" aria-hidden="true">
+        <path d="M1 5.5 Q 5.5 1, 10 5 Q 14.5 1, 19 5.5" fill="none" stroke="#c9ad77" stroke-width="1.4"
+          stroke-linecap="round"></path>
+      </svg>
+      <div class="km-container km-couple__inner" id="couple-container">
+        <h2 class="km-couple__heading km-font-heading" id="couple-heading">The Couple</h2>
+        <p class="km-couple__sub km-font-serif" id="couple-sub">Two families, many blessings, one timeless celebration.
+        </p>
+        <div id="couple-units-root" style="width:100%;display:flex;flex-direction:column;align-items:center"></div>
+      </div>
+    </section>
+
+    <!-- 3. COUNTDOWN SECTION -->
+    <section class="km-countdown" id="km-countdown">
+      <div class="km-countdown__stage" id="countdown-stage">
+        <img class="km-countdown__panel" src="assets/kalyana-mandapam/countdown-wall.webp" alt="" aria-hidden="true"
+          loading="lazy" decoding="async" />
+        <div class="km-countdown__unit" style="left:16.17%;width:11.5%;top:52%;height:24%">
+          <span class="km-countdown__value km-countdown__value--days" id="cd-days">&nbsp;</span>
+        </div>
+        <div class="km-countdown__unit" style="left:34.68%;width:11.5%;top:52%;height:24%">
+          <span class="km-countdown__value km-countdown__value--hours" id="cd-hours">&nbsp;</span>
+        </div>
+        <div class="km-countdown__unit" style="left:53.19%;width:11.5%;top:52%;height:24%">
+          <span class="km-countdown__value km-countdown__value--minutes" id="cd-minutes">&nbsp;</span>
+        </div>
+        <div class="km-countdown__unit" style="left:71.19%;width:11.5%;top:52%;height:24%">
+          <span class="km-countdown__value km-countdown__value--seconds" id="cd-seconds">&nbsp;</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. THE WEDDING JOURNEY (EVENTS) SECTION -->
+    <section class="km-events km-section" id="km-events">
+      <div class="km-events__kolam" aria-hidden="true"></div>
+      <div class="km-frame" aria-hidden="true">
+        <div class="km-frame-rail km-frame-rail--top"></div>
+        <div class="km-frame-rail km-frame-rail--bottom"></div>
+        <div class="km-frame-rail km-frame-rail--left"></div>
+        <div class="km-frame-rail km-frame-rail--right"></div>
+        <div class="km-frame-corner km-frame-corner--tl"></div>
+        <div class="km-frame-corner km-frame-corner--tr"></div>
+        <div class="km-frame-corner km-frame-corner--bl"></div>
+        <div class="km-frame-corner km-frame-corner--br"></div>
+      </div>
+      <div class="km-container">
+        <h2 class="km-events__heading km-font-script" id="events-heading">The Wedding Journey</h2>
+        <p class="km-events__sub km-font-serif" id="events-sub">Walk with us, function to function, to the sacred hour.
+        </p>
+      </div>
+      <div class="km-events__stage" id="events-stage">
+        <svg class="km-events__svg" id="events-svg" preserveAspectRatio="none" aria-hidden="true">
+          <path class="km-events__path" id="events-path" fill="none" stroke="none"></path>
+        </svg>
+        <div id="events-footprints-root"></div>
+        <div id="events-stops-root"></div>
+      </div>
+    </section>
+
+    <!-- 5. PHOTO GALLERY SECTION -->
+    <section class="km-gallery km-section" id="km-gallery">
+      <div class="km-gallery__toranam" aria-hidden="true"></div>
+      <div class="km-container">
+        <h2 class="km-gallery__heading km-font-script" id="gallery-heading">Before the Vows</h2>
+        <p class="km-gallery__sub km-font-serif" id="gallery-sub">Little moments from the years that brought us here.
+        </p>
+      </div>
+      <div class="km-gallery__weave" aria-hidden="true"></div>
+      <div class="km-gallery__motes" aria-hidden="true">
+        <span class="km-gallery__mote"></span><span class="km-gallery__mote"></span><span
+          class="km-gallery__mote"></span><span class="km-gallery__mote"></span>
+        <span class="km-gallery__mote"></span><span class="km-gallery__mote"></span><span
+          class="km-gallery__mote"></span><span class="km-gallery__mote"></span>
+        <span class="km-gallery__mote"></span><span class="km-gallery__mote"></span><span
+          class="km-gallery__mote"></span><span class="km-gallery__mote"></span>
+      </div>
+      <img class="km-gallery__parasol" src="assets/kalyana-mandapam/gallery-parasol.png" alt="" aria-hidden="true"
+        loading="lazy" decoding="async" />
+      <div class="km-gallery__stage">
+        <div class="km-gallery__grid" id="gallery-grid"></div>
+      </div>
+    </section>
+
+    <!-- 7. FOOTER SECTION -->
+    <footer class="km-footer" id="km-footer">
+      <div class="km-footer__card">
+        <img class="km-footer__art" src="assets/kalyana-mandapam/footer-card.jpg" alt="" aria-hidden="true"
+          loading="lazy" decoding="async" />
+        <div class="km-footer__greeting">
+          <p class="km-footer__greet-lead km-font-serif" id="footer-lead">We await your gracious presence</p>
+          <p class="km-footer__greet-main km-font-script" id="footer-main">and your blessings</p>
+          <p class="km-footer__greet-mark km-font-serif" id="footer-mark">శుభమస్తు</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 8. ENTRY OVERLAY CARD -->
+    <div class="km-entry" id="km-entry">
+      <div class="km-entry__veil">
+        <div class="km-entry__card">
+          <img class="km-entry__art" src="assets/kalyana-mandapam/entry-card.jpg" alt="" aria-hidden="true"
+            fetchpriority="high" decoding="async" />
+          <div class="km-entry__bloom" aria-hidden="true"></div>
+          <img class="km-entry__mandala" src="assets/south-indian/mandala-gold.webp" alt="" aria-hidden="true"
+            decoding="async" />
+          <div class="km-entry__content">
+            <div class="km-entry__group">
+              <p class="km-entry__label km-font-label">The Wedding Of</p>
+              <h1 class="km-entry__names km-font-script" id="entry-names"></h1>
+            </div>
+            <div class="km-entry__group km-entry__meta">
+              <p class="km-entry__date km-font-label" id="entry-date"></p>
+              <p class="km-entry__city km-font-label" id="entry-city"></p>
+            </div>
+            <div class="km-entry__group">
+              <button type="button" class="km-entry__cta km-font-label" id="entry-cta">
+                <span class="km-entry__cta-inner">Open Invitation</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 9. FLOATING AUDIO TOGGLE BUTTON -->
+    <button type="button" class="km-bell" id="km-bell" aria-label="Play background music" aria-pressed="false">
+      <span class="km-bell__disc">
+        <img class="km-bell__icon" id="km-bell-icon" src="assets/kalyana-mandapam/km-audio-off.png" alt=""
+          aria-hidden="true" decoding="async" />
+      </span>
+    </button>
+
+    <!-- 10. GALLERY LIGHTBOX MODAL -->
+    <div class="km-lightbox" id="km-lightbox" role="dialog" aria-modal="true" aria-label="Photo gallery viewer">
+      <button type="button" class="km-lightbox__btn km-lightbox__close" id="lightbox-close" aria-label="Close photo">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+      <button type="button" class="km-lightbox__btn km-lightbox__prev" id="lightbox-prev" aria-label="Previous photo">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6" />
+        </svg>
+      </button>
+      <img class="km-lightbox__img" id="lightbox-img" src="" alt="" />
+      <button type="button" class="km-lightbox__btn km-lightbox__next" id="lightbox-next" aria-label="Next photo">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6" />
+        </svg>
+      </button>
+      <div class="km-lightbox__counter" id="lightbox-counter"></div>
+    </div>
+
+  </div>
+
+  <!-- GSAP, ScrollTrigger, CustomEase, and Lenis Smooth Scroll -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+
+  <!-- User Editable Configuration & Main Application Logic -->
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
